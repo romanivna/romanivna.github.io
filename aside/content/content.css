@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Cormorant+Infant|Neucha');
+
+html{
+  height:100%;
+}
+
+.body{
+  height:100%;
+  max-width:1024px;
+  position:relative;
+  text-align:center;
+  margin:0 auto;
+}
+
+.page-description{
+  width: calc(100%-20px);
+  height:100px;
+  margin:54px 10px 10px;
+  border: 2px dashed;
+  border-radius: 30px;
+}
+
+.page-description p{
+  font-family: 'Amatic CS', cursive;
+}
+
+.container{
+  height:100%;
+  overflow: hidden;
+}
+
+.content{
+  width:100%;
+  height:100%;
+  z-index: 2;
+  background: #c7ac8d;
+}
+
+.content__item{
+  width: calc(100% - 240px);
+  padding:20px;
+}
+
+
+.content__item h1,
+.left-aside h1,
+.right-aside h1{
+  display: inline;
+  font-size: 2em;
+  text-transform: uppercase;
+  font-family: 'Neucha', cursive;
+  border: 2px solid #b27a63 ;
+  color:#fcf0d2 ;
+  border-radius:30px;
+  padding:10px;
+}
+
+.left-aside,
+.right-aside{
+  padding-top:30px;
+  overflow: auto;
+}
+
+.content__item p,
+.left-aside p,
+.right-aside p{
+  padding: 5px;
+  font-size: 1.2em;
+  font-family: 'Cormorant Infant', serif;
+  text-align: left;
+}
+
+.content__item img,
+.left-aside img{
+  width:80%;
+  margin:20px auto 5px;
+}
+
+.content__contact-p{
+  width:100%;
+  font-family: 'Cormorant Infant',serif
+}
+.content__contact-map {
+  width: 100%;
+  height:20%;
+}
+
+.left-aside, .right-aside {
+  display:none;
+  position:fixed;
+  top:0;
+  height:100%;
+  width:300px;
+  z-index:-1;
+}
+
+.left-aside{
+left:300px;
+}
+.right-aside{
+right:300px;
+}
+
+.content__always-visible-block{
+  float: right;
+  margin-right:10px;
+  width:200px;
+  height: 100%;
+  margin-bottom:100px;
+}
+
+.block_fixed{
+  position:fixed;
+  top:54px;
+  margin-right: 10px;
+}
+
+.content__always-visible-block_one-line{
+  font-family: 'Amatic CS', cursive;
+  font-size: 0.8em;
+  width:90%;
+  max-height: 130px;
+  overflow: auto;
+  margin:20px auto;
+  border-bottom: 2px solid #fcf0d2;
+}
+.content__always-visible-block_one-line img{
+  width:40%;
+  margin:5px;
+  float:left;
+  border-radius:20px;
+}
+
+.showLeftAside,
+.showRightAside{
+  display:none;
+}
+
+.asideMobile{
+  width:100%;
+  z-index:3;
+  background: #c7ac8d;
+}
+
+@media screen and (min-width:768px) and (max-width:1000px){
+  .left-aside,
+  .right-aside{
+    width:200px
+  }
+}
+
+
+@media screen and (max-width:768px){
+.header,
+.footer{
+  z-index:2;
+}
+
+  .showLeftAside,
+  .showRightAside{
+    display:block;
+    width:10%;
+    position:fixed;
+    top:0;
+    height: 100%;
+    background:#fcf0d2;
+    opacity:0.7;
+    font-weight:bold;
+    font-size:3em;
+    color:#b27a63;
+    margin:54px 0 30px;
+    padding-top:50%;
+    cursor:pointer;
+    z-index:4
+  }
+
+  .showLeftAside{
+    left:0;
+  }
+
+  .showRightAside{
+    right:0
+  }
+
+
+  .content__item img,
+  .content__item p,
+  .content__contact-map,
+  .content__contact-p {
+    float: none;
+  }
+
+	.content__item img{
+		display:block;
+    width:80%;
+    height:auto;
+		margin:auto;
+	}
+
+	.content__contact-map,
+  .content__contact-p {
+    width:100%;
+  }
+
+}
